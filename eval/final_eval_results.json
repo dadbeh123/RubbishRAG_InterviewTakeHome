@@ -1,0 +1,213 @@
+{
+ "maxrep_threshold": 0.6129032258064516,
+ "TEST": {
+  "0 server order (raw, topk=20)": {
+   "label": "0 server order (raw, topk=20)",
+   "n": 167,
+   "hit1": 0.23353293413173654,
+   "hit3": 0.3712574850299401,
+   "hit5": 0.41916167664670656,
+   "mrr": 0.32295247386643555,
+   "poison_q@3": 0.11976047904191617,
+   "poison_cite@3": 0.05788423153692615,
+   "dup_docid@5": 0.04550898203592816,
+   "dup_text@5": 0.0598802395209581,
+   "uniq_text@3": 0.9361277445109776
+  },
+  "1 ORIGINAL pipeline (RRF@5 + MMR)": {
+   "label": "1 ORIGINAL pipeline (RRF@5 + MMR)",
+   "n": 167,
+   "hit1": 0.19760479041916168,
+   "hit3": 0.33532934131736525,
+   "hit5": 0.41916167664670656,
+   "mrr": 0.2759481037924152,
+   "poison_q@3": 0.12574850299401197,
+   "poison_cite@3": 0.04590818363273453,
+   "dup_docid@5": 0.04550898203592816,
+   "dup_text@5": 0.0598802395209581,
+   "uniq_text@3": 1.0
+  },
+  "2 + grounding only (server order)": {
+   "label": "2 + grounding only (server order)",
+   "n": 167,
+   "hit1": 0.2694610778443114,
+   "hit3": 0.3772455089820359,
+   "hit5": 0.41916167664670656,
+   "mrr": 0.33822830529417364,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.034730538922155704,
+   "dup_text@5": 0.06227544910179641,
+   "uniq_text@3": 0.9281437125748498
+  },
+  "3 + length-comp fusion": {
+   "label": "3 + length-comp fusion",
+   "n": 167,
+   "hit1": 0.2634730538922156,
+   "hit3": 0.38922155688622756,
+   "hit5": 0.47904191616766467,
+   "mrr": 0.3504300921965593,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.027544910179640728,
+   "dup_text@5": 0.06586826347305387,
+   "uniq_text@3": 0.9500998003992014
+  },
+  "4 + doc/content dedup": {
+   "label": "4 + doc/content dedup",
+   "n": 167,
+   "hit1": 0.2634730538922156,
+   "hit3": 0.40119760479041916,
+   "hit5": 0.47904191616766467,
+   "mrr": 0.3520934321832526,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.0,
+   "dup_text@5": 0.0,
+   "uniq_text@3": 1.0
+  },
+  "5 + slot bonus = FINAL pipeline": {
+   "label": "5 + slot bonus = FINAL pipeline",
+   "n": 167,
+   "hit1": 0.2634730538922156,
+   "hit3": 0.40119760479041916,
+   "hit5": 0.47904191616766467,
+   "mrr": 0.3520934321832526,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.0,
+   "dup_text@5": 0.0,
+   "uniq_text@3": 1.0
+  },
+  "x repetition-filter only (corpus-max thr.)": {
+   "label": "x repetition-filter only (corpus-max thr.)",
+   "n": 167,
+   "hit1": 0.25748502994011974,
+   "hit3": 0.3772455089820359,
+   "hit5": 0.41916167664670656,
+   "mrr": 0.3385934975834127,
+   "poison_q@3": 0.05389221556886228,
+   "poison_cite@3": 0.017964071856287425,
+   "dup_docid@5": 0.034730538922155704,
+   "dup_text@5": 0.0598802395209581,
+   "uniq_text@3": 0.9301397205588816
+  }
+ },
+ "ALL": {
+  "0 server order (raw, topk=20)": {
+   "label": "0 server order (raw, topk=20)",
+   "n": 330,
+   "hit1": 0.22424242424242424,
+   "hit3": 0.37272727272727274,
+   "hit5": 0.45151515151515154,
+   "mrr": 0.3273703603653645,
+   "poison_q@3": 0.1484848484848485,
+   "poison_cite@3": 0.0707070707070707,
+   "dup_docid@5": 0.04666666666666663,
+   "dup_text@5": 0.055757575757575686,
+   "uniq_text@3": 0.948484848484849
+  },
+  "1 ORIGINAL pipeline (RRF@5 + MMR)": {
+   "label": "1 ORIGINAL pipeline (RRF@5 + MMR)",
+   "n": 330,
+   "hit1": 0.20606060606060606,
+   "hit3": 0.34545454545454546,
+   "hit5": 0.45151515151515154,
+   "mrr": 0.28797979797979795,
+   "poison_q@3": 0.15454545454545454,
+   "poison_cite@3": 0.05555555555555555,
+   "dup_docid@5": 0.04666666666666663,
+   "dup_text@5": 0.055757575757575686,
+   "uniq_text@3": 0.9989898989898991
+  },
+  "2 + grounding only (server order)": {
+   "label": "2 + grounding only (server order)",
+   "n": 330,
+   "hit1": 0.24848484848484848,
+   "hit3": 0.38484848484848483,
+   "hit5": 0.45151515151515154,
+   "mrr": 0.3370165945165945,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.03515151515151514,
+   "dup_text@5": 0.05878787878787871,
+   "uniq_text@3": 0.9414141414141418
+  },
+  "3 + length-comp fusion": {
+   "label": "3 + length-comp fusion",
+   "n": 330,
+   "hit1": 0.2636363636363636,
+   "hit3": 0.4,
+   "hit5": 0.48787878787878786,
+   "mrr": 0.35362433862433856,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.03333333333333333,
+   "dup_text@5": 0.06303030303030295,
+   "uniq_text@3": 0.9525252525252527
+  },
+  "4 + doc/content dedup": {
+   "label": "4 + doc/content dedup",
+   "n": 330,
+   "hit1": 0.2636363636363636,
+   "hit3": 0.4121212121212121,
+   "hit5": 0.49393939393939396,
+   "mrr": 0.35708874458874457,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.0,
+   "dup_text@5": 0.0,
+   "uniq_text@3": 1.0
+  },
+  "5 + slot bonus = FINAL pipeline": {
+   "label": "5 + slot bonus = FINAL pipeline",
+   "n": 330,
+   "hit1": 0.2636363636363636,
+   "hit3": 0.41515151515151516,
+   "hit5": 0.49393939393939396,
+   "mrr": 0.3578463203463203,
+   "poison_q@3": 0.0,
+   "poison_cite@3": 0.0,
+   "dup_docid@5": 0.0,
+   "dup_text@5": 0.0,
+   "uniq_text@3": 1.0
+  },
+  "x repetition-filter only (corpus-max thr.)": {
+   "label": "x repetition-filter only (corpus-max thr.)",
+   "n": 330,
+   "hit1": 0.24242424242424243,
+   "hit3": 0.3787878787878788,
+   "hit5": 0.45151515151515154,
+   "mrr": 0.3403313164694391,
+   "poison_q@3": 0.05454545454545454,
+   "poison_cite@3": 0.01818181818181818,
+   "dup_docid@5": 0.03515151515151514,
+   "dup_text@5": 0.05757575757575749,
+   "uniq_text@3": 0.9424242424242429
+  }
+ },
+ "boot_final_vs_server": [
+  [
+   0.0305,
+   0.0021,
+   0.0602
+  ],
+  [
+   0.0424,
+   0.0,
+   0.0848
+  ]
+ ],
+ "boot_final_vs_orig": [
+  [
+   0.07,
+   0.0394,
+   0.1013
+  ],
+  [
+   0.0698,
+   0.0242,
+   0.1182
+  ]
+ ]
+}

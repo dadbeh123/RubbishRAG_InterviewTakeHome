@@ -71,8 +71,7 @@ def cmd_bepar(args):
     import rubbish_rag as R
     import rubbish_rag.pipeline  # noqa registers RubbishRAG stages
     # note: pipeline.retrieve ignores key; call remote directly for logging key
-    from server._hidden_retriever import remote_retrieve
-    hits = remote_retrieve(args.query, topk=args.topk, api_key=args.key)
+    hits = R.get("retriever")(args.query, topk=args.topk)
     hits = R.get("reranker")(args.query, hits)
     pred = R.get("resolver")(args.query, hits)
     print("--- hits (fused) ---")
@@ -94,7 +93,7 @@ def _run_bench(key="demo-key"):
     from server._hidden_retriever import remote_retrieve
     for item in vis:
         t0 = time.perf_counter()
-        hits = remote_retrieve(item["query"], topk=5, api_key=key)
+        hits = R.get("retriever")(item["query"], topk=5, api_key=key)
         hits = R.get("reranker")(item["query"], hits)
         pred = R.get("resolver")(item["query"], hits)
         durs.append((time.perf_counter() - t0) * 1000.0)
@@ -127,7 +126,9 @@ def cmd_bekesh(args):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from server._hidden_retriever import remote_retrieve
+    sys.path.insert(0, BASE)
+    import rubbish_rag as R
+    import rubbish_rag.pipeline
     vis = json.load(open(os.path.join(BASE, "server", "visible_bench.json"),
                          encoding="utf-8"))
     gaps, lens, bms = [], [], []
@@ -141,7 +142,8 @@ def cmd_bekesh(args):
         return max(Counter(toks).values())
 
     for item in vis[:20]:
-        hits = remote_retrieve(item["query"], topk=5, api_key=args.key)
+        hits = R.get("retriever")(item['query'], topk=5)
+        hits = R.get("reranker")(item['query'], hits)
         if hits:
             gaps.append(hits[0]["fused"] - hits[-1]["fused"])
         for h in hits[:2]:
