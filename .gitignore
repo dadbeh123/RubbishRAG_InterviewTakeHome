@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .venv/
+venv/
 traces/trace.jsonl
 traces/quota.json
 traces/metrics.json

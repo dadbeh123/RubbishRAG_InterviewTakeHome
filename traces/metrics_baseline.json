@@ -1,0 +1,116 @@
+{
+ "pipe": "naive",
+ "agg": {
+  "total": 20,
+  "accuracy": 0.3,
+  "answer_acc": 0.3,
+  "clarify_acc": 0.0,
+  "timing_ms": {
+   "mean": 15.0,
+   "p50": 15.3,
+   "p95": 16.9
+  }
+ },
+ "results": [
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v0"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v1"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v2"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v3"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v4"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v5"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v6"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v7"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v8"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v9"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v10"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v11"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v12"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v13"
+  },
+  {
+   "pass": true,
+   "kind": "answer",
+   "id": "v14"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v15"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v16"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v17"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v18"
+  },
+  {
+   "pass": false,
+   "kind": "answer",
+   "id": "v19"
+  }
+ ]
+}
